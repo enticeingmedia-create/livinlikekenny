@@ -1,0 +1,11 @@
+{
+  "name": "Livin' Like Kenny Virtual Tiki Hut",
+  "short_name": "LLK Tiki Hut",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07191f",
+  "theme_color": "#02B8CF",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

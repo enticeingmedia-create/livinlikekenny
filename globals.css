@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Trebuchet MS", ui-rounded, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #fff2cf;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,202,24,.35), transparent 24rem),
+    radial-gradient(circle at 84% 8%, rgba(242,58,115,.26), transparent 22rem),
+    radial-gradient(circle at 50% 60%, rgba(2,184,207,.16), transparent 28rem),
+    #07191f;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+button, input, textarea, select { font: inherit; }
+
+.tiki-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.07));
+  border: 1px solid rgba(255,242,207,.20);
+  box-shadow: 0 24px 80px rgba(2, 184, 207, .16);
+  backdrop-filter: blur(18px);
+}
+
+.tiki-panel {
+  background:
+    linear-gradient(145deg, rgba(16,32,39,.88), rgba(7,25,31,.76)),
+    radial-gradient(circle at top left, rgba(255,202,24,.18), transparent 18rem);
+  border: 1px solid rgba(255,242,207,.16);
+}
+
+.tiki-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+}
+
+.scrollbar::-webkit-scrollbar { width: 10px; }
+.scrollbar::-webkit-scrollbar-thumb { background: rgba(255,242,207,.22); border-radius: 99px; }
+.scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,.05); }
+
+@media (display-mode: standalone) {
+  body { overscroll-behavior-y: contain; }
+}
